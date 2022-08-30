@@ -1,0 +1,34 @@
+print("El programa realizara el calculo del IMC sin tener en cuenta sexo o si es deportista")
+
+nombre = input("Ingrese su nombre por favor: ")
+
+edad = int(input("Ingrese su edad: "))
+
+pesoK = int(input("Ingrese su peso en kilos: "))
+
+alturaM = float(input("Ingrese su altura en metros: "))
+
+
+while edad >= 18:
+    alturaP = float(alturaM*alturaM)
+    IMC = round(pesoK/alturaP,2)
+    
+    if IMC < 18.5:
+        print(f'{nombre} estas en Bajo peso, IMC de {IMC}')
+        break
+        
+    elif IMC >= 18.5 and IMC <= 24.9:
+        print(f'{nombre} estas en Normal, IMC de {IMC}')
+        break
+        
+    elif IMC >= 25.0 and IMC <= 29.9:
+        print(f'{nombre} estas en Sobrepeso,IMC de {IMC}')
+        break
+    
+    elif IMC >= 30.0:
+        print(f'{nombre} estas en Obesidad, IMC de {IMC}')
+        break
+        
+    else:
+        print("No se permite calcular el IMC de un infante")
+    break
